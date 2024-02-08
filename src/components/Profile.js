@@ -14,7 +14,7 @@ export default function Profile(){
     const email=useRef();
     const name=useRef();
     const password=useRef();
-    const mission=useRef();asdsdadf
+    const mission=useRef();
   useEffect(() => {
     const fetchData = async () => {
       try {
