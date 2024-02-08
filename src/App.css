@@ -1,38 +1,275 @@
-.App {
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background: url(beachtrashcolours.jpg) no-repeat center center fixed;
+    height: 100%;
+    background-size: cover;
+    overflow:hidden;
+    width: 100%;
+    margin: 0;
+}
+.signUp{
+  place-items:center;
+  margin:auto;
+}
+.profile{
+  place-items:center;
+  margin:auto;
+}
+.logIn{
+
+  place-items:center;
+  margin:auto;
+}
+::selection{
+  background: #4f0202;
+  color: #000000;
+}
+.wrapper{
+  width: 380px;
+  background: rgba(255, 255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
   text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, #03c5be, #04ca0b);
 }
-
-.App-logo {
-  height: 40vmin;
+.wrapper form{
+  padding: 10px 30px 50px 30px;
+}
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field2{
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+  border-color: #19224f;
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
   pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #000000a9;
+  background: rgba(255, 255, 255, 0.0);
+  transform: translateY(-90%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form .content{
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: rgb(0, 251, 255);
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: "";
+}
+form .field input[type="submit"]{
+  color: #ffffff;
+  border: none;
+  padding-left: 0;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(135deg, #03c5be, #04ca0b);
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .login-link{
+    color: #262626;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom:-40px;
+
+}
+form .policy-link{
+    color: #262626;
+    margin-top: 60px;
+    text-align: center;
+}
+form .pass-link a,
+form .signup-link a, .login-link a, .policy-link a{
+  color: blue;
+  text-decoration: underline;
+}
+form .policy a{
+    color: blue;
+    text-decoration: underline;
+  }
+form .pass-link a:hover,
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+.App {
+  font-family: "Lato", sans-serif;
+  margin: auto;
+  height: 100%;
+}
+
+.App-nav {
+  width:100%;
+  background-size:cover;
+  border: 1px solid black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(-135deg, #03c5be, #04ca0b);
+  color:white;
+}
+.nav-link1 {
+  float: left;
+  display: inline;
+  display: block;
   color: white;
+  font-weight:600;
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.App-link:hover {
+  background-color: #111;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.search{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.pwd-checker-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+}
+.strength-unacceptable::-webkit-progress-value {
+  background-color: #e20b07;
+}
+.strength-weak::-webkit-progress-value {
+  background-color: #ff7a00;
+}
+.strength-average::-webkit-progress-value {
+  background-color: #ebbd04;
+}
+.strength-good::-webkit-progress-value {
+  background-color: #0b75ed;
+}
+.strength-strong::-webkit-progress-value {
+  background-color: #01a917;
+}
+.pwd-checker-bar::-webkit-progress-bar {
+  background-color: rgb(246, 241, 241);   
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.pwd-checker-bar::-webkit-progress-value {
+  background-size: 30px 18px, 100% 100%, 100% 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 400px) {
+  .App{
+    height:auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-main{
+    height:auto;
   }
+  .sidebar {
+      min-width: 100%;
+      height: auto;
+  }
+
+  .registration{
+    min-width:90%;
+    font-size:smaller;
+    height:auto;
+  }
+
 }
