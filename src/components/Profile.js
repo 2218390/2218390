@@ -6,7 +6,6 @@ import {useState} from "react";
 import {useEffect} from "react";
 import {useRef} from "react";
 import FormData from 'form-data'
-import { Buffer } from "buffer";
 export default function Profile(){
    
     const [user, setUser] = useState([]);
@@ -16,15 +15,6 @@ export default function Profile(){
     const name=useRef();
     const password=useRef();
     const mission=useRef();asdsdadf
-  /*useEffect(() => {
-    axios
-      .get("http://localhost:8080/user/"+id)
-      .then((result) => {
-        console.log(result.data);
-        setUser(result.data);
-      })
-      .catch((error) => console.log(error));
-  }, []);*/
   useEffect(() => {
     const fetchData = async () => {
       try {
